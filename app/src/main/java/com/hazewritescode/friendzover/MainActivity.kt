@@ -1,16 +1,18 @@
 package com.hazewritescode.friendzover
 
-import android.content.Context
 import android.os.Bundle
-import android.view.View
-import android.view.ViewGroup
-import android.widget.BaseAdapter
-import android.widget.ListView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import okhttp3.OkHttpClient
+
+
+
 
 class MainActivity : AppCompatActivity() {
+
 
     private lateinit var textMessage: TextView
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
@@ -31,40 +33,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
-        val recipeListView = findViewById<ListView>(R.id.recipeListView)
-        recipeListView.adapter = RecipeListViewAdapter(this)
+        val recipeRecyclerView = findViewById<RecyclerView>(R.id.recipeRecyclerView)
+        recipeRecyclerView.layoutManager = LinearLayoutManager(this)
+        recipeRecyclerView.adapter = RecipeRecyclerViewAdapter()
 
         textMessage = findViewById(R.id.message)
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
+
+        fetchJSON()
     }
 
-    private class RecipeListViewAdapter(context: Context): BaseAdapter() {
+    fun fetchJSON(){
+        val url: String = getString(R.string.news_feed_api_key)
 
-        private val mContext: Context
-
-        init {
-            mContext = context
-
-        }
-
-
-        override fun getView(p0: Int, convertView: View?, viewGroup: ViewGroup?): View {
-            val textView = TextView(mContext)
-            textView.text = "Test"
-            return textView
-        }
-
-        override fun getCount(): Int {
-            return 3
-        }
-
-        override fun getItemId(p0: Int): Long {
-            return p0.toLong()
-        }
-
-        override fun getItem(p0: Int): Any {
-            return "Test String"
-        }
+        val client = OkHttpClient()
 
     }
 }
+
+

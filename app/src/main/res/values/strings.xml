@@ -4,4 +4,5 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="friends_are_coming">Friends are coming!</string>
+    <string name="news_feed_api_key">https://newsapi.org/v2/top-headlines?country=us${&}apiKey=376ea839facd44ebbd1652008f9ad1e8</string>
 </resources>
