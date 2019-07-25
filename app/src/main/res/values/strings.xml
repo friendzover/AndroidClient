@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">FriendZover</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="app_name">FrienZover</string>
+    <string name="title_home">Try something new!</string>
+    <string name="title_friends">Friends</string>
     <string name="friends_are_coming">Friends are coming!</string>
-    <string name="news_feed_api_key">https://newsapi.org/v2/top-headlines?country=us${&}apiKey=376ea839facd44ebbd1652008f9ad1e8</string>
+    <string name="recipe_feed_Route">https://www.themealdb.com/api/json/v1/1/latest.php</string>
+    <string name="zover_login_route">https://zover.herokuapp.com/auth/login</string>
+    <string name="title_activity_registration">RegistrationActivity</string>
 </resources>
