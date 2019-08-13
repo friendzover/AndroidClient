@@ -10,6 +10,12 @@ import java.io.IOException
 import android.widget.TextView
 import com.hazewritescode.friendzover.LoggedInUser
 import com.hazewritescode.friendzover.R
+import android.view.View
+import android.view.animation.AnimationUtils
+
+
+
+
 
 
 class LoginActivity : AppCompatActivity() {
@@ -19,6 +25,11 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         configureLoginButton()
+        configureRegisterButton()
+        animateStart()
+    }
+
+    private fun animateStart(){
     }
 
     fun configureLoginButton(){
@@ -33,6 +44,15 @@ class LoginActivity : AppCompatActivity() {
                     errtext.text = it.error
                 } else startActivity(intent)
             }
+        }
+    }
+
+    fun configureRegisterButton(){
+        val button = findViewById<Button>(R.id.registerButton)
+        val intent = Intent(this, RegistrationActivity::class.java)
+
+        button.setOnClickListener {
+                startActivity(intent)
         }
     }
 

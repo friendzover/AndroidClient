@@ -1,10 +1,11 @@
-package com.hazewritescode.friendzover
+package com.hazewritescode.friendzover.adapters
 
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.hazewritescode.friendzover.HomeFeed
+import com.hazewritescode.friendzover.R
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.row_main.view.*
 

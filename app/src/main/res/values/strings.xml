@@ -3,7 +3,10 @@
     <string name="title_home">Try something new!</string>
     <string name="title_friends">Friends</string>
     <string name="friends_are_coming">Friends are coming!</string>
-    <string name="recipe_feed_Route">https://www.themealdb.com/api/json/v1/1/latest.php</string>
+    <string name="recipe_feed_Route">https://www.themealdb.com/api/json/v2/8673533/latest.php</string>
     <string name="zover_login_route">https://zover.herokuapp.com/auth/login</string>
     <string name="title_activity_registration">RegistrationActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
